@@ -1,0 +1,340 @@
+/* General styles */
+* {
+    font-family: roboto;
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: boxes;
+    src: url(../Fonts/Roboto-Regular.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.home-flex {
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+}
+
+/* Left container */
+.home-left {
+    width: 60%;
+    padding-right: 2rem;
+        padding-top: 0;
+        margin-top: -5rem;
+}
+
+.home-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.home-title span {
+    color: #6C5124;
+}
+
+.home-filler {
+    font-family: regular;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.home-button {
+    padding: 1.5rem 3.5rem;
+    background-color: #6C5124;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    /* Make the button a positioned element */
+    overflow: hidden;
+    /* Hide content that slides out of the button bounds */
+    transition: background-color 0.3s;
+    font-family: boxes;
+}
+
+.home-button span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    /* Smoothly move the text */
+}
+
+.home-button::after {
+    content: '→';
+    /* Unicode arrow pointing right */
+    position: absolute;
+    opacity: 0;
+    right: -2rem;
+    /* Position the arrow completely outside the button */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: white;
+    transition: opacity 0.3s ease, right 0.3s ease;
+    /* Smoothly slide the arrow in */
+}
+
+.home-button:hover {
+    background-color: #59441e;
+}
+
+.home-button:hover span {
+    transform: translateX(-0.5rem);
+    /* Move the text slightly to the left */
+}
+
+.home-button:hover::after {
+    opacity: 1;
+    /* Make the arrow visible */
+    right: 1rem;
+    /* Slide the arrow into the button */
+}
+/* Right container */
+.home-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Updated image container styles */
+/* Updated image container styles */
+.image-container {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    /* Width as a percentage of parent */
+    padding-top: 100%;
+    /* Ensures 2:1 aspect ratio (height is 50% of width) */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    /* Rounded edges */
+}
+
+/* Updated image styles */
+.home-image {
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio and cover container */
+    display: block;
+    /* Prevent inline-block whitespace issues */
+}
+.arrows {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.left-circle, .right-circle {
+    font-size: 2rem;
+    color: #d9d9d9;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.left-circle:hover, .right-circle:hover {
+    color: #6C5124;
+    transform: scale(1.2);
+}
+
+/* Media queries for larger screens */
+@media (min-width: 1600px) {
+    .home-flex {
+        max-width: 1400px;
+    }
+
+    .home-title {
+        font-size: 4rem;
+    }
+
+    .home-filler {
+        font-size: 1.2rem;
+    }
+
+    .home-button {
+        font-size: 20px;
+        padding: 1.5rem 4.5rem;
+    }
+}
+@media (min-width: 2000px) {
+
+    .home-flex {
+        max-width: 1400px;
+    }
+
+    .home-title {
+        font-size: 5rem;
+    }
+
+    .home-filler {
+        font-size: 1.8rem;
+    }
+
+    .home-button {
+        font-size: 20px;
+        padding: 1.5rem 4.5rem;
+    }
+        .home-left {
+            padding-top: 0;
+            margin-top: -5rem;
+        }
+}
+@media (max-width: 1200px) {
+    .home-flex{
+        padding: 0 1rem 0 2rem;
+    }
+    .home-title {
+            font-size: 2.5rem;
+        }
+    
+        .home-filler {
+            font-size: .8rem;
+            padding-right: 10%;
+        }
+        .home-left{
+            padding-top: 0;
+            margin-top: -5rem;
+            text-align: left;
+        }
+        .home-flex{
+            height: 70vh;
+        }
+
+}
+/* Media queries for smaller screens (tablet) */
+@media (max-width: 900px) {
+    .home-flex {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .home-left, .home-right {
+        width: 100%;
+        padding: 1rem;
+    }
+    .home-title{
+        font-size: 1.8rem;
+        text-align: left;
+    }
+    .home-filler{
+        font-size: .8rem;
+        text-align: left;
+    }
+    .home-button{
+        font-size: 14px;
+        padding: 1.2rem 3rem;
+    }
+
+    .image-container{
+    }
+        .home-left {
+            padding-top: 2rem;
+            margin-top: 0;
+        }
+}
+@media (max-width: 600px) {
+    * {}
+    .home-left{
+        align-items: start;
+        text-align: left;
+        padding: 0;
+    }
+
+    .home-right {
+        padding: 0;
+        display: none;
+    }
+
+    .home-title {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+
+    .home-filler {
+        font-size: 1.2rem;
+    }
+
+    .home-button {
+        font-size: 16px;
+        padding: 1rem 3rem;
+        border-radius: 20px;
+    }
+
+    .home-flex {
+        margin-bottom: 10rem;
+    }
+
+    .image-container {
+        width: 90%;
+        height: 100%;
+        z-index: 7;
+    }
+
+    .home-image {
+        padding-bottom: 0;
+    }
+}
+@media (max-width: 400px) {
+    * {
+    }
+        .home-right{
+            padding: 0;
+            display: none;
+        }
+        .home-left{
+            padding: 0;
+        }
+        .home-title {
+            font-size: 2rem;
+        }
+    
+        .home-filler {
+            font-size: .8rem;
+        }
+        .home-button {
+                    font-size: 16px;
+                    padding: 1rem 3rem;
+                    border-radius: 20px;
+                }
+        .home-flex{
+            padding: 0 5%;
+            margin-bottom: 5rem;
+        }
+                .image-container {
+                    width: 90%;
+                    height: 100%;
+                    z-index: 7;
+                }
+                .home-image{
+                    padding-bottom: 0;
+                }
+}

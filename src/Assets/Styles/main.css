@@ -1,0 +1,17 @@
+@font-face {
+    font-family: bold;
+    src: url(../Fonts//Roboto-Black.ttf);
+}@font-face {
+    font-family: regular;
+    src: url(../Fonts/Roboto-Regular.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: bold;
+    line-height: 1.5;
+    background-color: #ffffff;
+}

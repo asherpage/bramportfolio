@@ -1,0 +1,122 @@
+/* Container for the entire layout */
+@font-face {
+    font-family: boxes;
+    src: url(../Fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: blk;
+    src: url(../Fonts/Roboto-Black.ttf);
+}
+.ref-title{
+    font-size: 4rem;
+    font-family: blk;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}
+.ref-container {
+    padding: 20px 5%;
+    background: linear-gradient(to bottom, white 50%, #f6f6f6 50%);
+    overflow: hidden;
+    /* Hide overflow for a clean slider appearance */
+}
+
+/* Slider container */
+.ref-slider {
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    scroll-behavior: smooth;
+    /* Smooth scrolling effect */
+    display: flex;
+}
+
+/* Grid container for the boxes */
+.ref-box-container {
+    display: flex;
+    /* Use flex for horizontal layout */
+    gap: 20px;
+}
+
+/* Individual box styles */
+.ref-box {
+    flex: 0 0 calc(25% - 20px);
+    /* Three boxes visible at a time */
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.ref-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Image placeholder */
+.ref-box-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+
+.ref-box-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure images fill the space without distortion */
+}
+/* Heading styles */
+.ref-h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Line break */
+hr {
+    margin: 10px auto;
+    width: 50%;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Paragraph styles */
+.ref-p {
+    font-family: boxes;
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Button styles */
+.ref-button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #6C5124;
+    border: 2px solid #6C5124;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ref-button:hover {
+    background: #6C5124;
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+/* Hide scrollbar */
+.ref-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.ref-slider {
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
