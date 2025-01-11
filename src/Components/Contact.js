@@ -11,7 +11,7 @@ export const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_o7wczsg', 'template_mmb0tzx', form.current, 'HAzGnEfG61Cf4zDiR')
+      .sendForm('service_fm0tt8m', 'template_mmb0tzx', form.current, 'HAzGnEfG61Cf4zDiR')
       .then(
         () => {
           console.log('SUCCESS!');
@@ -52,7 +52,13 @@ export const Contact = () => {
             </div>
             <div className="form-field">
               <label htmlFor="phone">Phone Number</label>
-              <input id="phone" name="user_phone" type="tel" placeholder="Phone Number" />
+  <input 
+    id="phone" 
+    name="user_phone" 
+    type="tel" 
+    placeholder="(xxx) xxx-xxxx" 
+    required 
+  />
             </div>
             <div className="form-field">
               <label htmlFor="message">Message</label>
@@ -92,11 +98,12 @@ export const Contact = () => {
                 <span>ROC 325008, CR-48</span>
               </p>
               <p><span>ROC 316404, CR-8</span></p>
+              <p><span>W9 Upon Request</span></p>
             </div>
             <div className="info-item">
               <h3>Socials</h3>
               <p>
-                <span>Facebook | Twitter | Instagram</span>
+                <span><a href='https://www.facebook.com/BramFlooring/'>Facebook</a> | <a href='https://twitter.com/bramflooring'>Twitter</a> | <a href='https://www.instagram.com/bram.flooring/'>Instagram</a></span>
               </p>
             </div>
           </div>

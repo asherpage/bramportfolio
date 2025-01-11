@@ -209,7 +209,11 @@ button:hover {
     padding-bottom: 1rem;
     margin: 0;
 }
-
+span a{
+    text-decoration: none;
+    color: #6C5124;
+    font-family: boxes;
+}
 .contact-head {
     font-size: 4rem;
     color: #222;
@@ -298,6 +302,9 @@ textarea {
 
 }
 @media (max-width: 600px) {
+    .contact-filler{
+        padding: 0 5%;
+    }
     .contact-container{
         flex-direction: column;
         padding-top: 0;

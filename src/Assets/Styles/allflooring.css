@@ -161,18 +161,22 @@
 }
 .learn-button {
     width: 40%;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     background-color: #6C5124;
-    border-radius: 20px;
+    border-radius: 50px;
+    /* More rounded corners for a modern look */
     border: none;
     color: white;
     font-size: 18px;
+    font-weight: 100;
+    /* Adds a sense of boldness and modernity */
     position: relative;
-    /* Needed for the pseudo-element positioning */
     cursor: pointer;
     overflow: hidden;
-    /* Prevents overflow for sliding arrow */
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease;
+    /* Added transform for smooth scale effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
 }
 
 .learn-button span {
@@ -183,35 +187,39 @@
 
 .learn-button::after {
     content: '→';
-    /* Standard arrow */
     position: absolute;
     opacity: 0;
     right: -2rem;
     /* Initially place the arrow off-screen */
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
-    /* Same size as the button text */
-    transition: opacity 0.3s ease, right 0.3s ease;
-    /* Smooth slide-in effect */
+    font-size: 20px;
+    /* Slightly larger arrow */
     color: white;
+    transition: opacity 0.3s ease, right 0.3s ease;
 }
 
 .learn-button:hover {
     background-color: #59441e;
-    /* Changes the background color on hover */
+    transform: translateY(-2px);
+    /* Slightly lifts the button on hover */
 }
 
 .learn-button:hover span {
     transform: translateX(-0.5rem);
-    /* Slightly move the text to the left */
 }
 
 .learn-button:hover::after {
     opacity: 1;
-    /* Make the arrow visible */
     right: 1rem;
     /* Slide the arrow into view */
+}
+
+.learn-button:active {
+    transform: translateY(0);
+    /* Button presses back into place */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle effect on click */
 }
 .words-flex {
     display: flex;
@@ -375,6 +383,9 @@
                                 }
 }
 @media (max-width: 600px) {
+    .flex-container{
+        padding-bottom: 0;
+    }
     .flooring-flex {}
 
     .overlay .title {

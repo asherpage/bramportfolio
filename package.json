@@ -4,13 +4,16 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "cloudinary": "^2.5.1",
     "cra-template": "1.2.0",
     "framer-motion": "^11.16.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.14.1",
-    "react-scripts": "5.0.1"
+    "react-lazy-load-image-component": "^1.6.3",
+    "react-scripts": "5.0.1",
+    "sharp": "^0.33.5"
   },
   "scripts": {
     "start": "react-scripts start",

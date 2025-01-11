@@ -1,70 +1,58 @@
 import React from "react";
-import "../Assets/Styles/allflooring.css"
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import "../Assets/Styles/allflooring.css";
 import placeholder from "../Assets/Images/bram5.jpg";
 import lam from "../Assets/Images/lam.jpg";
 import viny from "../Assets/Images/viny.jpg";
 import carpet from "../Assets/Images/carp.jpg";
 import gal from "../Assets/Images/Gallery/Commercial13.jpg";
-
-const containerVariants = {
-  hidden: { opacity: 1 }, // Ensures the container stays visible
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3, // Delay between each child's animation
-    },
-  },
-};
-
-const flexBoxVariants = {
-  hidden: { opacity: 0, x: -50 }, // Start off-screen to the left
-  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, // Slide into view
-};
-
+import Gallery from "./Gallery";
 export const AllFlooring = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
-
   return (
     <div>
       <div className="flooring-flex">
         <div className="flooring-title">All Flooring</div>
         <div className="flooring-filler">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius cumque
-          omnis laudantium, corrupti esse officiis!
+          Whether you need durable commercial carpets, luxury vinyl, or custom hardwood installations, we deliver expertise and craftsmanship tailored to your needs.
         </div>
         <div className="flooring-arrow"></div>
       </div>
 
-      {/* Motion Container */}
-      <motion.div
-        ref={ref}
-        className="flex-container"
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-      >
-        {[
-          { img: lam, title: "Laminate Flooring", subtitle: "Starting at $99" },
-          { img: viny, title: "Vinyl Flooring", subtitle: "Starting at $198" },
-          { img: carpet, title: "Carpet", subtitle: "Starting at $297" },
-          { img: gal, title: "View More", subtitle: "Gallery" },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            className="flex-box"
-            variants={flexBoxVariants}
-          >
-            <img src={item.img} alt={item.title} />
-            <div className="overlay">
-              <div className="title">{item.title}</div>
-              <div className="subtitle-overlay">{item.subtitle}</div>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-      <div className="about-flex">
+      {/* Flex Container with Basic Image Tags */}
+      <div className="flex-container">
+        <div className="flex-box">
+          <img src={gal} alt="View More" />
+          <a href="#gallery">
+          <div className="overlay">
+            <div className="title">Tile</div>
+            <div className="subtitle-overlay">Shaw | Daltile | Soho</div>
+          </div>
+          </a>
+        </div>
+        <div className="flex-box">
+          <img src={viny} alt="Vinyl Flooring" />
+          <div className="overlay">
+            <div className="title">Vinyl Flooring</div>
+            <div className="subtitle-overlay">Philadelphia | Aladin | Soho</div>
+          </div>
+        </div>
+        <div className="flex-box">
+          <img src={carpet} alt="Carpet" />
+          <div className="overlay">
+            <div className="title">Carpet</div>
+            <div className="subtitle-overlay">Philadelphia | Aladin | Engineered Floors</div>
+          </div>
+        </div>
+        
+        <div className="flex-box">
+          <img src={lam} alt="Laminate Flooring" />
+          <div className="overlay">
+            <div className="title">Laminate Flooring</div>
+            <div className="subtitle-overlay">Mohawk | Shaw</div>
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="about-flex">
         <div className="images">
           <img src={placeholder} alt="About BRAM" />
         </div>
@@ -88,9 +76,9 @@ export const AllFlooring = () => {
             quae facilis cumque, voluptatibus natus similique sunt voluptatum!
             Rerum minus praesentium quos impedit porro natus.
           </p>
-          <button className="learn-button"><span>Learn More</span></button>
+          <a href="#gallery"><button className="learn-button"><span>View Gallery</span></button></a> 
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

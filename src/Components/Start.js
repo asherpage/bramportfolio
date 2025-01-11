@@ -5,6 +5,7 @@ import first from "../Assets/Images/bram4.jpg";
 import second from "../Assets/Images/bram3.jpg";
 import nike from "../Assets/Images/Nike1.jpg"
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import Gallery from "./Gallery";
 
 const images = [nike, first, second];
 
@@ -57,11 +58,11 @@ export const Start = () => {
           Solutions Crafted for You
         </h1>
         <p className="home-filler">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque ad
-          iure atque aspernatur error dicta, ratione pariatur obcaecati
-          quibusdam a.
+          Bram Flooring has been proudly serving the greater Phoenix area with exceptional flooring solutions for over 13 years. Our commitment to quality, innovation, and customer satisfaction has made us a trusted name in both residential and commercial flooring projects.
         </p>
-        <button className="home-button"><span>Learn More</span></button>
+        <a href="#gallery">
+        <button className="home-button"><span>View Gallery</span></button>
+        </a>
       </div>
       <div className="home-right">
         <div className="image-container">

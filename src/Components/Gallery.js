@@ -27,7 +27,7 @@ const Gallery = () => {
       : [...commercialImages, ...residentialImages];
 
   return (
-    <div className="gallery-container">
+    <div className="gallery-container" id="gallery">
       <h3 className="subtitle">Our Work</h3>
       <h1 className="heading">Gallery</h1>
 
