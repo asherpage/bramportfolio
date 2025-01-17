@@ -60,7 +60,7 @@ export const Start = () => {
           Bram Flooring has been proudly serving the greater Phoenix area with exceptional flooring solutions for over 13 years. Our commitment to quality, innovation, and customer satisfaction has made us a trusted name in both residential and commercial flooring projects.
         </p>
         <a href="#gallery">
-        <button className="home-button"><span>View Gallery</span></button>
+        <button className="home-button"><span className="light">View Gallery</span></button>
         </a>
       </div>
       <div className="home-right">
