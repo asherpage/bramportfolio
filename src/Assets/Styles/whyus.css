@@ -47,11 +47,13 @@
     font-size: 1rem;
     margin-top: 0;
     font-family: regular;
+    color: #2c2c2c;
 }
 .why-left-box li {
     font-size: 1rem;
     margin-top: 0;
     font-family: regular;
+    color: #555;
 }
 
 .why-right-box img {
@@ -106,12 +108,15 @@
 /* View Work Button */
 /* View Work Text Link */
 .view-work-link {
+    background-color: #6c5224;
+    padding: 20px 40px;
+    border-radius: 50px;
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    /* right: 20px; */
     font-size: 1rem;
     font-family: regular;
-    color: #222;
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -126,7 +131,6 @@
 }
 
 .view-work-link:hover {
-    color: #222;
 }
 
 .view-work-link:hover .arrow {
@@ -139,7 +143,7 @@
     padding: 40px;
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); */
 }
 @media (max-width: 1300px) {
     .top-section{

@@ -35,7 +35,6 @@
     /* Adjust the color of the arrow */
     position: relative;
 }
-
 .flooring-arrow::after {
     content: '';
     position: absolute;
@@ -109,7 +108,7 @@
 /* Overlay text styling */
 .overlay .title {
     font-family: bold;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: white;
     margin-bottom: 0.2rem;
 }

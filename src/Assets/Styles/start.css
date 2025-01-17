@@ -1,6 +1,6 @@
 /* General styles */
 * {
-    font-family: roboto;
+    /* font-family: roboto; */
     outline: none;
     user-select: none;
     box-sizing: border-box;
@@ -69,7 +69,8 @@ html, body {
     overflow: hidden;
     /* Hide content that slides out of the button bounds */
     transition: background-color 0.3s;
-    font-family: boxes;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 100;
 }
 
 .home-button span {

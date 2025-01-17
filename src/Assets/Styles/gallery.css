@@ -2,7 +2,10 @@
     font-family: gallery;
     src: url(../Fonts/Roboto-Black.ttf);
 }
-
+@font-face {
+    font-family: regular;
+    src: url(../Fonts/Roboto-Regular.ttf);
+}
 * {
     font-family: gallery;
 }
@@ -16,6 +19,7 @@
     color: #6C5124;
     text-align: center;
     margin: 0;
+    font-family: regular;
 }
 
 .heading {
