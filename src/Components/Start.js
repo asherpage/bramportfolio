@@ -5,7 +5,6 @@ import first from "../Assets/Images/bram4.jpg";
 import second from "../Assets/Images/bram3.jpg";
 import nike from "../Assets/Images/Nike1.jpg"
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
-import Gallery from "./Gallery";
 
 const images = [nike, first, second];
 
