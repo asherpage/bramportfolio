@@ -1,13 +1,10 @@
 import React from "react";
 import "../Assets/Styles/whyus.css";
-import { FaUsers, FaClipboardCheck, FaDollarSign, FaHandshake, FaChartLine } from "react-icons/fa";
 import couch from "../Assets/Images/bram2.jpg";
 import { RiTeamFill } from "react-icons/ri";
-import { MdAttachMoney } from "react-icons/md";
 import { FaBook } from "react-icons/fa6";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { FaMoneyBillWave } from "react-icons/fa";
-import Gallery from "./Gallery"
 
 const WhyUs = () => {
   return (

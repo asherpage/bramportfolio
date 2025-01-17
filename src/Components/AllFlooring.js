@@ -1,11 +1,9 @@
 import React from "react";
 import "../Assets/Styles/allflooring.css";
-import placeholder from "../Assets/Images/bram5.jpg";
 import lam from "../Assets/Images/lam.jpg";
 import viny from "../Assets/Images/viny.jpg";
 import carpet from "../Assets/Images/carp.jpg";
 import gal from "../Assets/Images/Gallery/Commercial13.jpg";
-import Gallery from "./Gallery";
 export const AllFlooring = () => {
   return (
     <div>
