@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../Assets/Styles/gallery.css";
 
 const Gallery = () => {
-  // Set initial filter state to "commercial"
   const [filter, setFilter] = useState("commercial");
 
   const handleFilterChange = (e) => {
@@ -18,13 +17,42 @@ const Gallery = () => {
     require(`../Assets/Images/Gallery/Residential${index + 1}.jpg`)
   );
 
-  // Determine images to display based on the selected filter
   const displayedImages =
     filter === "commercial"
       ? commercialImages
       : filter === "residential"
       ? residentialImages
       : [...commercialImages, ...residentialImages];
+
+  // Lazy loading hook
+  const useLazyLoad = (options) => {
+    const imgRefs = useRef([]);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src; // Replace placeholder with actual source
+              observer.unobserve(img); // Stop observing once loaded
+            }
+          });
+        },
+        { threshold: 0.1, ...options }
+      );
+
+      imgRefs.current.forEach((img) => {
+        if (img) observer.observe(img);
+      });
+
+      return () => observer.disconnect(); // Clean up observer
+    }, [options]);
+
+    return imgRefs;
+  };
+
+  const imgRefs = useLazyLoad();
 
   return (
     <div className="gallery-container" id="gallery">
@@ -68,10 +96,16 @@ const Gallery = () => {
       {/* Image Grid */}
       <div className="image-grid">
         {displayedImages.map((image, index) => (
-  <div className="image-box" key={index}>
-    <img src={image} alt={`Gallery Item ${index + 1}`} />
-  </div>
-))}
+          <div className="image-box" key={index}>
+            {/* Placeholder src and data-src for lazy loading */}
+            <img
+              data-src={image}
+              src="placeholder.jpg" // Fallback placeholder image
+              alt={`Gallery Item ${index + 1}`}
+              ref={(el) => (imgRefs.current[index] = el)}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

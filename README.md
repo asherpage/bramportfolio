@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# BRAM Flooring Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The BRAM Flooring Portfolio is a professional website designed to showcase the company's extensive work in both commercial and residential flooring projects. The site highlights past projects, provides valuable references, and facilitates communication with potential customers through an integrated contact form.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### 1. **Portfolio Showcase**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Commercial Projects**: A gallery of completed commercial flooring projects, including descriptions and images to illustrate the quality of work.
+- **Residential Projects**: A dedicated section for residential flooring installations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. **References**
 
-### `npm test`
+- A curated list of references from satisfied clients to build trust with potential customers.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. **Contact Form**
 
-### `npm run build`
+- Users can fill out a contact form to get in touch with BRAM Flooring.
+- Form submissions are sent directly to **sales@bramflooring.com**.
+- Fields include:
+  - Name
+  - Email Address
+  - Phone Number
+  - Project Details/Inquiry Message
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. **About BRAM Flooring**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Information about the company, including its history, mission, and dedication to quality and customer satisfaction.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 5. **Responsive Design**
 
-### `npm run eject`
+- The website is mobile-friendly and fully responsive, ensuring seamless access on all devices.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js
+- **Email Integration**: Nodemailer
+- **Hosting**: Netlify
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/asherpage/bramportfolio
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd bram-flooring-portfolio
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Open the website in your browser at:
+   ```
+   http://localhost:3000
+   ```
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To deploy the portfolio:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+2. Upload the build folder to your hosting provider or deploy using a service like Vercel or Netlify.
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Visit the website to explore BRAM Flooring's projects and learn more about the company.
+- Use the contact form to inquire about services or discuss potential commercial deals.
+- Share the references section with potential clients to demonstrate credibility and past success.
 
-### Analyzing the Bundle Size
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Add a project filtering feature for users to view specific types of projects (e.g., by flooring material or industry).
+- Include customer reviews directly on the project pages.
+- Integrate a live chat feature for immediate inquiries.
 
-### Making a Progressive Web App
+## Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+For any questions or issues, please contact:
 
-### Advanced Configuration
+- asher.page2121@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Developed by:** Asher Page
