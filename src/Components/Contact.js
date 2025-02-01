@@ -79,7 +79,7 @@ export const Contact = () => {
               <h3>Contact Us <IoCall /></h3>
               <p>Speak to our helpful team</p>
               <p>
-                <span>+1 (123) 456-7890</span>
+                <span>+1 (623) 806-8543</span>
               </p>
               <p>
                 <span>sales@bramflooring.com</span>

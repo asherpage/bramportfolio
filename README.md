@@ -13,7 +13,7 @@ The BRAM Flooring Portfolio is a professional website designed to showcase the c
 
 ### 2. **References**
 
-- A curated list of references from satisfied clients to build trust with potential customers.
+- A curated list of references which users can scroll through and it will take you to there google maps page to build trust with potential customers.
 
 ### 3. **Contact Form**
 
